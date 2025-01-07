@@ -1,0 +1,126 @@
+{
+	"info": {
+		"_postman_id": "130b9a3c-2697-4830-9f8c-8ce0eccb00eb",
+		"name": "prideOfCows",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "36213872"
+	},
+	"item": [
+		{
+			"name": "createSubscription",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"customerId\": 101,\n    \"productId\": 201,\n    \"productName\": \"Full Cream Milk\",\n    \"frequency\": \"daily\",\n    \"quantity\": 2,\n    \"pricePerUnit\": 100,\n    \"startDate\": \"2025-06-17\",\n    \"endDate\": \"2025-12-31\"\n}\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8081/subscriptions",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"subscriptions"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "updateSubscription",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"productName\": \"Double Toned Milk\",\n    \"frequency\": \"weekly\",\n    \"quantity\": 3,\n    \"pricePerUnit\": 120.0,\n    \"startDate\": \"2025-07-01\",\n    \"endDate\": \"2025-12-31\"\n}\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8081/subscriptions/7",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"subscriptions",
+						"7"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getSubscriptions",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8081/subscriptions",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"subscriptions"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getSubscriptionByCustomerId",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8081/subscriptions/7",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"subscriptions",
+						"7"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "deleteSubscription",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8081/subscriptions/7",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"subscriptions",
+						"7"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
